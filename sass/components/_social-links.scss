@@ -1,0 +1,34 @@
+/*Иконки социальных сетей*/
+
+/*список соц сетей*/
+.social-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Круглый фон иконки соц сети*/
+.social-links__thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: $client-color;
+
+  transition: background-color $an-time cubic-bezier(0.4, 0, 0.2, 1),
+    fill $an-time cubic-bezier(0.4, 0, 0.2, 1);
+
+  /*Круглый фон иконки соц сети в ФУТЕРЕ*/
+  &--footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: $primary-white-color;
+  }
+
+  /*Ховер для иконок соц сетей*/
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: $primary-white-color;
+  }
+}

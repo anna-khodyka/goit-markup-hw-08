@@ -1,0 +1,42 @@
+@import "./base/normalize";
+@import "./utils/varibles";
+//Общие стили ко всем тєгам в проекте
+@import "./base/base";
+//Класс visually-hidden
+@import "./utils/visually-hidden";
+//Геометрия сайта: контейнер, грид, секция
+@import "./components/geometry";
+// Логотип кампании
+@import "./components/logo";
+// Кнопка
+@import "./components/button";
+// Кнопка в виде крестика
+@import "./components/close-button";
+// Социальные сети
+@import "./components/social-links";
+// Кастомный чекбокс
+@import "./components/checkbox";
+// Header сайта
+@import "./components/header";
+// Секция Hero
+@import "./components/hero";
+// Секция Features
+@import "./components/features";
+//Секция Directions
+@import "./components/directions";
+//Секция Team
+@import "./components/team";
+//Секция Clients
+@import "./components/clients";
+// Footer сайта
+@import "./components/footer";
+// Форма сбора емейл
+@import "./components/footer-form";
+// Форма приема обращения
+@import "./components/overlay-form";
+// Оверлей на весь экран
+@import "./components/overlay";
+//Фильтр на странице Портфолио
+@import "./components/filter";
+// Проект на странице Портфолио
+@import "./components/project";

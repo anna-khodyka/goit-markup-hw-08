@@ -1,0 +1,26 @@
+/*Постоянные клиенты*/
+
+.clients__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients__thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid $client-color;
+  border-radius: 4px;
+  fill: $client-color;
+
+  transition: order-color $an-time cubic-bezier(0.4, 0, 0.2, 1),
+    fill $an-time cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border-color: $accent-color;
+  }
+}

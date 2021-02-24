@@ -1,0 +1,57 @@
+/*Подвал страницы*/
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $dark-background;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__contacts-item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__company-addr {
+    color: $primary-white-color;
+  }
+
+  &__email,
+  &__telephone {
+    color: $adress-color;
+  }
+
+  &__social,
+  &__email-form {
+    margin-top: 12px;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 206px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primary-white-color;
+  }
+
+  &__email-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

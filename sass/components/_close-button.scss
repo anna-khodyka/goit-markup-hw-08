@@ -1,0 +1,27 @@
+/*Круглая кнопка с крестиком для закрытия окна */
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &__icon {
+    width: 11px;
+    height: 11px;
+    fill: $logo-color;
+    transition: fill $an-time cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: $accent-color;
+  }
+}

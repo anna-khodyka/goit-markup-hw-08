@@ -1,0 +1,34 @@
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Стили секции*/
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__title {
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+}
+
+/*Карточки проектов*/
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * #{$projectgap});
+  margin-bottom: calc(-1 * #{$projectgap});
+
+  &__item {
+    flex-basis: calc(100% / #{$projectcolumn} - #{$projectgap});
+    margin-right: $projectgap;
+    margin-bottom: $projectgap;
+  }
+}

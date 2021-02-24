@@ -1,0 +1,33 @@
+/*Фильтры портфолио*/
+
+.filter {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+  text-align: center;
+
+  &__button {
+    padding: 6px 22px;
+    font-size: 16px;
+    line-height: 1.62;
+    background-color: $light-background;
+    border-radius: 4px;
+    border-color: transparent;
+
+    transition: background-color $an-time cubic-bezier(0.4, 0, 0.2, 1),
+      color $an-time cubic-bezier(0.4, 0, 0.2, 1),
+      filter $an-time cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__button--active,
+  &__button:hover,
+  &__button:focus {
+    color: $primary-white-color;
+    background-color: $accent-color;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+}

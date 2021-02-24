@@ -1,0 +1,45 @@
+/*Чекбокс*/
+.checkbox {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 36px;
+
+  &__agreement {
+    color: $accent-color;
+    text-decoration: underline;
+  }
+}
+
+/*Рисуем кастомный чекбокс*/
+.checkbox__icon {
+  position: absolute;
+  top: 4px;
+  left: 12px;
+
+  display: block;
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid $primary-text-color;
+  border-radius: 2px;
+
+  transition: background-color $an-time cubic-bezier(0.4, 0, 0.2, 1),
+    border-color $an-time cubic-bezier(0.4, 0, 0.2, 1);
+
+  .checkbox__default:checked ~ & {
+    background-color: $accent-color;
+    border-color: $accent-color;
+    background-image: url("../images/fullcheck.svg");
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+/*Тень при фокусе/ховере чекбокса
+
+.checkbox:focus + .checkbox-icon,
+.checkbox:hover + .checkbox-icon {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}*/
