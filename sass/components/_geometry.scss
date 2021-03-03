@@ -1,34 +1,61 @@
 .container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  padding: 0 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
+
 /*Стили секции*/
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
   }
 }
 
 /*Карточки проектов*/
 .grid {
+  /*Количество столбцов карточек проектов в ПОРТФОЛИО*/
+  --projectgap: 30px;
+  --projectcolumn: 1;
+  @media screen and (min-width: 768px) {
+    --projectcolumn: 2;
+  }
+  @media screen and (min-width: 1200px) {
+    --projectcolumn: 3;
+  }
+
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(-1 * #{$projectgap});
-  margin-bottom: calc(-1 * #{$projectgap});
+  margin-right: calc(-1 * var(--projectgap));
+  margin-bottom: calc(-1 * var(--projectgap));
 
   &__item {
-    flex-basis: calc(100% / #{$projectcolumn} - #{$projectgap});
-    margin-right: $projectgap;
-    margin-bottom: $projectgap;
+    flex-basis: calc(100% / var(--projectcolumn) - var(--projectgap));
+    margin-right: var(--projectgap);
+    margin-bottom: var(--projectgap);
   }
 }

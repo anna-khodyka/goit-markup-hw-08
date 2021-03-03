@@ -1,0 +1,84 @@
+.mobile-menu {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  max-width: var(--mobile);
+  height: 100vh;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  transition: transform $an-time cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+  background-color: $primary-white-color;
+  //не отображается на планшете и десктопе
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+// Появление сверху мобильного меню при нажатии на кнопку-бургер
+.mobile-menu.is-open {
+  transform: translateX(-50%) translateY(0%);
+}
+
+.mobile-menu__link {
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+
+  &:hover,
+  &:focus,
+  &--current {
+    color: $accent-color;
+  }
+}
+
+.mobile-menu__page:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__address:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__address:last-child {
+  margin-bottom: 64px;
+}
+
+.mobile-menu__tel {
+  font-size: 34px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+  //уменьшила шрифт чтобы все влезло в одну строку
+  @media screen and (max-width: 376px) {
+    font-size: 24px;
+  }
+}
+
+.mobile-menu__email {
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+}
+
+.mobile-menu__socials {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile-menu__social:not(:last-child) {
+  padding-right: 20px;
+}
+
+.mobile-menu__social-link {
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}

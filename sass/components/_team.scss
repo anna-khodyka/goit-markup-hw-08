@@ -2,17 +2,8 @@
 .team {
   background-color: $light-background;
 
-  &__players {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__player-photo {
-    display: block;
-  }
-
   &__player {
-    width: 270px;
+    width: 100%;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -23,7 +14,7 @@
   }
 
   &__content {
-    padding: 30px 32px;
+    padding: 30px 15px;
   }
   &__name {
     margin-bottom: 10px;
@@ -33,5 +24,41 @@
     margin-bottom: 16px;
     font-weight: normal;
     color: $secondary-text-color;
+  }
+}
+
+// отступы для мобильного
+@media screen and (max-width: 767.9px) {
+  .team__player:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+//Стили для планшета и десктопа
+@media screen and (min-width: 768px) {
+  .team__players {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+//Стили только для планшета
+@media screen and (min-width: 768px) and (max-width: 1199.9px) {
+  .team__player {
+    flex-basis: calc(100% / 2 - 15px);
+
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+}
+// Стили для десктопа
+@media screen and (min-width: 1200px) {
+  .team__player {
+    flex-basis: calc(100% / 4 - (30px * 3) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }

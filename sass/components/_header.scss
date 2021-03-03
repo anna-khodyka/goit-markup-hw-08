@@ -1,42 +1,121 @@
-/*Шапка страницы*/
+// /*Шапка страницы*/
 
 .header {
   border-bottom: 1px solid #ececec;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  //Кнопка-бургер для открытия мобильного меню
+  &__menu-button {
+    padding: 0;
+    border: none;
+
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+    //не отображается на планшете и десктопе
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menu-icon {
+    display: block;
+  }
+  //контейнер Хедера
   &__content {
     display: flex;
     align-items: center;
-    height: 80px;
+    justify-content: space-between;
   }
 
   &__pages-list,
-  &__address-list {
-    display: flex;
+  &__address-list,
+  &__navigation {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
 
+  &__address-list {
+    flex-direction: column;
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+  }
+
+  // &__pages-list,
+  // &__address-list,
+  // &__navigation {
+  //   display: flex;
+  //   //не отображается на мобильном
+  //   @media screen and (max-width: 767px) {
+  //     display: none;
+  //   }
+  // }
+
+  // @media screen and (max-width: 1199px) {
+  //   &__address-list {
+  //     flex-direction: column;
+  //   }
+  // }
+
   &__adress-item:not(:last-child) {
-    padding-right: 30px;
+    @media screen and (max-width: 1199.9px) {
+      padding-bottom: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding-right: 30px;
+    }
   }
 
   &__pages-item:not(:last-child) {
     padding-right: 50px;
   }
-
-  &__address-list {
-    margin-left: auto;
-  }
-
-  /*Иконки*/
-  &__icon {
-    fill: currentColor;
+}
+/*Иконки*/
+.header__icon {
+  fill: currentColor;
+  margin-right: 8px;
+  @media screen and (min-width: 1200px) {
     margin-right: 10px;
+  }
+}
+.header__icon--envelope {
+  width: 14px;
+  height: 10px;
+}
+.header__icon--smartphone {
+  width: 10px;
+  height: 14px;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__icon--envelope {
+    width: 16px;
+    height: 10px;
+  }
+  .header__icon--smartphone {
+    width: 10px;
+    height: 16px;
   }
 }
 
 .header__link {
   color: $primary-text-color;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   transition: color $an-time cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -47,7 +126,12 @@
 
   &--address {
     color: $secondary-text-color;
+    font-size: 12px;
     display: flex;
+    align-items: center;
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+    }
   }
 
   /*Стили текущей страницы*/

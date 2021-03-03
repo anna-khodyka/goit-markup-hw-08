@@ -4,54 +4,65 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $dark-background;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  &__contacts-item:not(:last-child) {
-    margin-bottom: 9px;
-  }
-
-  &__company-addr {
-    color: $primary-white-color;
-  }
-
-  &__email,
-  &__telephone {
-    color: $adress-color;
-  }
-
-  &__social,
-  &__email-form {
-    margin-top: 12px;
-  }
-
-  &__social {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    width: 206px;
-  }
+  text-align: center;
 
   &__title {
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.17;
     text-transform: uppercase;
     color: $primary-white-color;
   }
 
-  &__email-form {
+  &__company-addr {
+    color: $primary-white-color;
+  }
+  &__email,
+  &__telephone {
+    color: $adress-color;
+  }
+}
+.footer__contacts-item:not(:last-child) {
+  margin-bottom: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+
+@media screen and (max-width: 1199.9px) {
+  .footer__contacts,
+  .footer__social {
+    margin-bottom: 60px;
+  }
+}
+
+//Стили для планшета и десктопа
+@media screen and (min-width: 768px) {
+  .footer__container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: baseline;
+  }
+}
+//Стили для планшета
+@media screen and (min-width: 768px) and (max-width: 1199.9px) {
+  .footer__contacts,
+  .footer__social {
+    flex-basis: 50%;
+  }
+  .footer__email-form {
+    flex-basis: 450px;
+  }
+}
+//Стили для десктопа
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }

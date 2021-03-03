@@ -1,40 +1,63 @@
-.features {
-  &__list {
+.features__icon-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-background;
+  height: 120px;
+  width: 100%;
+}
+
+.features__title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 767.9px) {
+    text-align: center;
+  }
+}
+
+.features__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $secondary-text-color;
+}
+//Стили только для мобильных
+@media screen and (max-width: 767.9px) {
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+//Стили для планшета и десктопа
+@media screen and (min-width: 768px) {
+  .features__list {
     display: flex;
+    flex-wrap: wrap;
   }
+}
+//Стили только для планшета
+@media screen and (min-width: 768px) and (max-width: 1199.9px) {
+  .features__item {
+    flex-basis: calc(100% / 2 - 15px);
 
-  &__item {
-    width: 270px;
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
   }
-
-  &__item:not(:last-child) {
+}
+// Стили для десктопа
+@media screen and (min-width: 1200px) {
+  .features__item {
+    flex-basis: calc(100% / 4 - (30px * 3) / 4);
+  }
+  .features__item:not(:last-child) {
     margin-right: 30px;
-  }
-
-  &__icon-thumb {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $light-background;
-    width: 270px;
-    height: 120px;
-  }
-  &__icon {
-  }
-
-  &__title {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 1.15;
-    text-transform: uppercase;
-  }
-
-  &__text {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    color: $secondary-text-color;
   }
 }

@@ -2,9 +2,22 @@
 
 .filter {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
-  text-align: center;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+
+  margin-bottom: 15px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 35px;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
 
   &__button {
     padding: 6px 22px;
@@ -17,10 +30,6 @@
     transition: background-color $an-time cubic-bezier(0.4, 0, 0.2, 1),
       color $an-time cubic-bezier(0.4, 0, 0.2, 1),
       filter $an-time cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 8px;
   }
 
   &__button--active,

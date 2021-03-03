@@ -5,9 +5,19 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  height: 95%;
+  max-height: 609px;
+  width: 100%;
+  max-width: 450px;
+  overflow: scroll;
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    max-width: none;
+    height: 581px;
+    max-height: none;
+    overflow: initial;
+  }
 
-  width: 528px;
-  height: 581px;
   padding: 40px;
 
   font-style: normal;
@@ -28,7 +38,10 @@
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
+    @media screen and (min-width: 1200px) {
+      line-height: 1.15;
+    }
     text-align: center;
     color: $primary-text-color;
 
@@ -41,7 +54,7 @@
     width: 100%;
   }
 }
-// Иконки внутри поля ввода
+
 .form__input {
   display: block;
   height: 40px;
@@ -60,7 +73,7 @@
     outline: transparent;
   }
 }
-
+// Иконки внутри поля ввода
 .form__icon {
   position: absolute;
   top: 28px;
