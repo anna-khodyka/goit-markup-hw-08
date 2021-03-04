@@ -8,6 +8,9 @@
   font-size: 14px;
   line-height: 1.71;
   text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 
   &__title {
     margin-bottom: 20px;

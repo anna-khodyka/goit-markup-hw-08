@@ -8,6 +8,11 @@
     font-size: 26px;
     line-height: 1.2;
   }
+  .header & {
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
+  }
 
   &__accent {
     color: $accent-color;

@@ -37,6 +37,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (min-width: 1200px) {
+      justify-content: flex-start;
+    }
   }
 
   &__pages-list,
@@ -52,6 +55,7 @@
     flex-direction: column;
     @media screen and (min-width: 1200px) {
       flex-direction: row;
+      margin-left: auto;
     }
   }
 

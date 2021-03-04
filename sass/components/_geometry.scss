@@ -50,12 +50,10 @@
 
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(-1 * var(--projectgap));
-  margin-bottom: calc(-1 * var(--projectgap));
+  margin: calc(-1 * var(--projectgap) / 2);
 
   &__item {
     flex-basis: calc(100% / var(--projectcolumn) - var(--projectgap));
-    margin-right: var(--projectgap);
-    margin-bottom: var(--projectgap);
+    margin: calc(var(--projectgap) / 2);
   }
 }
